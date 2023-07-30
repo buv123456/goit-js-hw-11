@@ -62,7 +62,6 @@ img {
   position: relative;
   width: 100px;
   left: calc(50% - 100px / 2);
-  margin: 0 auto;
 }
 
 .form-input {

@@ -7,10 +7,10 @@ import { createMarkup } from './JS/markup';
 const baseURL = 'https://pixabay.com/api/';
 let lightbox = new SimpleLightbox('.gallery a');
 
-const loadMoreBtnEl = document.querySelector('.load-more');
-loadMoreBtnEl.hidden = true;
 const galleryEl = document.querySelector('.gallery');
 const formEl = document.querySelector('#search-form');
+const loadMoreBtnEl = document.querySelector('.load-more');
+loadMoreBtnEl.hidden = true;
 
 const params = {
   key: '38526354-71390ec20934c98ef5a24eda8',
@@ -60,7 +60,7 @@ async function onLoadClick() {
     lightbox.refresh();
     loadMoreBtnEl.hidden = totalHits < params.page * params.per_page;
     if (loadMoreBtnEl.hidden) {
-      Notiflix.Notify.warning(
+      Notiflix.Notify.info(
         "We're sorry, but you've reached the end of search results."
       );
     }
