@@ -59,7 +59,7 @@ async function onLoadClick() {
     galleryEl.insertAdjacentHTML('beforeend', createMarkup(hits));
     lightbox.refresh();
     loadMoreBtnEl.hidden = totalHits < params.page * params.per_page;
-    if (!loadMoreBtnEl.hidden) {
+    if (loadMoreBtnEl.hidden) {
       Notiflix.Notify.warning(
         "We're sorry, but you've reached the end of search results."
       );

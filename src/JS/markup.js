@@ -1,5 +1,4 @@
 export function createMarkup(photos) {
-  console.log(photos);
   return photos
     .map(
       i => `<a href="${i.largeImageURL}" class="photo-card">
