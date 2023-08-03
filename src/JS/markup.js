@@ -1,7 +1,7 @@
 export function createMarkup(photos) {
   return photos
     .map(
-      i => `<a href="${i.largeImageURL}" class="photo-card">
+      i => `<a href="${i.largeImageURL}" class="photo-card item">
           <div class="photo-img">
              <img src="${i.previewURL}" alt="${i.tags}" loading="lazy" />
           </div>
